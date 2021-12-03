@@ -17,8 +17,10 @@ export default function Body() {
         if (inputElem.value.length<=2){
         console.log("kdjdk")
         }else{
+          
             localStorage.setItem("inputValue", JSON.stringify(inputObj))
             inputElem.value=""
+            window.location.reload();
         }
 
     }

@@ -45,6 +45,7 @@ export default function Sidebar(props) {
 
   const clear = () => {
     localStorage.clear();
+    window.location.reload();
   };
 
   console.log(inputObj);
@@ -57,8 +58,8 @@ export default function Sidebar(props) {
 
   const drawer = (
     <div>
-      <Toolbar sx={{ backgroundColor: "black" }}>
-        <Typography variant="h5" color="white">
+      <Toolbar sx={{ backgroundColor: "black" ,justifyContent:"center",}}>
+        <Typography variant="h5" color="white" >
           Users
         </Typography>
       </Toolbar>
@@ -71,14 +72,14 @@ export default function Sidebar(props) {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <ListItem button key={index}>
+            <ListItem sx={{py:{sm:0 },px:{sm:1}}} button key={index}>
               <ListItemText primary={index + 1} />
               <Typography>{element}</Typography>
             </ListItem>
           </AccordionSummary>
-          <AccordionDetails>
-            <Link to="/relation" style={{ textDecoration: "none" }}>
-              <Button variant="contained">Add relation</Button>
+          <AccordionDetails sx={{padding:1}}>
+            <Link to="/relation" style={{ textDecoration: "none" ,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"cneter"}}>
+              <Button  variant="contained">Add relation</Button>
             </Link>
           </AccordionDetails>
           {console.log(inputObj)}

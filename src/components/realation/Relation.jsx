@@ -45,13 +45,9 @@ export default function Relation() {
         width:"fit-content",
         mt:{sm:4}
       }}>
-          <TextField
-            id="input"
-            label="Username"
-            type="search"
-            variant="standard"
-            sx={{width:{sm:200}}}
-          />
+          <Typography>
+            {}
+          </Typography>
           <Typography
           sx={{
             display: "flex",
